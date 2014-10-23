@@ -6,6 +6,6 @@ Course project for Getting and Cleaning data
 Using the following dataset: 
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
 
-This code merges the testing and training datasets and cleans up the columns and rows. 
+The .r code run_analysis merges the testing and training datasets and cleans up the columns and rows. 
 
-See the codebook for more information on the analyses performed, and meaning of the variables. . 
+See the codebook for more information on the analyses performed, and meaning of the variables. 
