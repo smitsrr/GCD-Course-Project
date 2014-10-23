@@ -1,13 +1,11 @@
 #Course project for Getting and Cleaning Data. 10/23/2014
-library(dplyr)
+library(plyr); library(dplyr)
 #load the data for training
-setwd("./Data/train")
 trainData<- read.table("X_train.txt")
 id<- read.table("subject_train.txt")
 act<- read.table("y_train.txt")
 TR<- cbind(id, act, trainData)
 
-setwd("C:/Users/u0979017/Documents/Coursera/getting and cleaning data/Course Project/Data/test")
 testData<- read.table("X_test.txt")
 id2<-read.table("subject_test.txt")
 act2<- read.table("y_test.txt")
@@ -15,8 +13,7 @@ tst<- cbind(id2, act2, testData)
 
 mergedData<-rbind(TR, tst)  #append the two datasets
 
-namesPath<-"C:/Users/u0979017/Documents/Coursera/getting and cleaning data/Course Project/Data/features.txt"
-names<- read.table(namesPath)  #the names are the second column. 
+names<- read.table("features.txt")  #the names are the second column. 
 n<- as.character(names[, 2]  )
 nm<- c("ID", "activity")
 names<- c(nm, n)
