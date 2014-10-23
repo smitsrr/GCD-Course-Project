@@ -1,0 +1,20 @@
+Downloaded raw data from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+Save the following files into your working directory:
+  features.txt
+  subject_test.txt
+  subject_train.txt
+  X_test.txt
+  X_train.txt
+  y_test.txt
+  y_train.txt
+  
+When the code is run it will merge the Test and Train datasets for each pariticipant (1-30). 
+  -It then adds the column names using features.txt.  We are only interested in mean and standard deviation
+  variables so we only keep variables that contain "ean" or "std". 
+  -Next, we add the activity names that each participant performed (either walking, walking upstairs, walking downstairs, 
+  sitting, standing, or lying). 
+  -To make the variable names more readable we eliminate all of the characters that are in the variable names (i.e., "(", ")")
+  -The last step is that we calculate the mean of each variable for each participant for each activity. 
+  
+The output of running the code will be a data file saved to your working directory with the resultint tidy dataset: "courseProject.txt"
