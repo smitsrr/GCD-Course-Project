@@ -47,7 +47,7 @@ table <- tbl_df(z2)
 
 #New data frame that is just the average of each variable for each activity and each subject
 #group or subset by subject
-meanstbl <- group_by(table, ID) %>%
+meanstbl <- group_by(table, Activity, ID) %>%
         summarise_each(funs(mean))
 
 write.table(meanstbl, "courseProject.txt", row.names = FALSE)  #this willb e the final step)
