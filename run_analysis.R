@@ -36,12 +36,14 @@ z2$activity <- NULL
 #Rename the columns to be meaninful names
 colnames <- c(names(z2))
 colnames2 <- gsub("-", "", colnames)
-colnames3 <- sub("(", "", colnames2, fixed = TRUE)
-colnames4 <- sub(")", "", colnames3, fixed = TRUE)
-colnames5 <- sub("mean", "Mean", colnames4, fixed = TRUE)
-colnames6 <- sub("std", "Std", colnames5, fixed = TRUE)
-colnames7 <- sub("x", "X", colnames6, fixed = TRUE)
-colnames(z2) <- colnames7
+colnames3 <- gsub("(", "", colnames2, fixed = TRUE)
+colnames4 <- gsub(")", "", colnames3, fixed = TRUE)
+colnames5 <- tolower(colnames4)
+colnames6 <- sub(",", "", colnames5, fixed = TRUE)
+colnames(z2) <- colnames6
+
+table <- tbl_df(z2)
+
 
 table <- tbl_df(z2)
 
